@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Login | Deriv</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #ff444f;
+            --border: #d6dadb;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #fff; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+
+        header { width: 100%; text-align: center; padding: 20px 0; }
+        .logo { color: var(--primary); font-size: 30px; font-weight: 900; text-decoration: none; }
+
+        .container { width: 100%; max-width: 380px; margin-top: 20px; }
+        h1 { font-size: 24px; font-weight: 700; margin-bottom: 30px; color: var(--text); }
+
+        /* --- STYLE DES LIENS-BOUTONS (CORRIGÉ) --- */
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            border-radius: 25px; /* Forme arrondie pro */
+            text-decoration: none; /* Enlève le soulignement bleu */
+            color: var(--text); /* Force la couleur du texte */
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .btn-link:active { background: #f2f3f4; }
+
+        /* Bouton Email Rouge */
+        .btn-email {
+            background: var(--primary);
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+
+        .divider {
+            display: flex; align-items: center; text-align: center;
+            color: #646e73; font-size: 14px; margin: 25px 0;
+        }
+        .divider::before, .divider::after { content: ''; flex: 1; border-bottom: 1px solid var(--border); }
+        .divider::before { margin-right: 15px; }
+        .divider::after { margin-left: 15px; }
+
+        .signup { text-align: center; margin-top: 30px; font-size: 14px; }
+        .signup a { color: var(--text); font-weight: 700; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">deriv</a>
+    </header>
+
+    <div class="container">
+        <h1>Welcome back</h1>
+
+        <a href="connexion.html" class="btn-link">
+            <i class="fab fa-google" style="color: #DB4437; font-size: 18px;"></i>
+            Log in with Google
+        </a>
+
+        <a href="connexion.html" class="btn-link">
+            <i class="fab fa-facebook" style="color: #1877F2; font-size: 18px;"></i>
+            Log in with Facebook
+        </a>
+
+        <a href="connexion.html" class="btn-link">
+            <i class="fab fa-apple" style="color: #000; font-size: 18px;"></i>
+            Log in with Apple
+        </a>
+
+        <div class="divider">or</div>
+
+        <a href="connexion.html" class="btn-link btn-email">
+            Log in with Email
+        </a>
+
+        <p class="signup">Don't have an account yet? <a href="#">Sign up</a></p>
+    </div>
+
+</body>
+</html>
